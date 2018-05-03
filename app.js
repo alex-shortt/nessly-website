@@ -3,26 +3,16 @@ $(document).ready(function() {
     var canvas = $("canvas");
     canvas.appendTo(".interact");
     var shopvid = document.getElementsByClassName("shop")[0].getElementsByTagName("video")[0];
-    var creditsvid = document.getElementsByClassName("credits")[0].getElementsByTagName("video")[0];
 
     shopvid.pause();
-    creditsvid.pause();
     $('.splash').click(function() {
         $(this).addClass('fadeOut');
         $('.dash').removeClass('hidden');
         $('.dash').addClass('fadeIn');
     });
-    $('#creditslink').click(function() {
-        $('.credits').removeClass('hidden');
-        $('.dash').addClass('hidden');
-        creditsvid.currentTime = 0;
-        creditsvid.play();
-        $('.credits').addClass('fadeIn');
-    });
     $('.back').click(function() {
         $('.credits').addClass('fadeOut');
         $('.credits').addClass('hidden');
-        creditsvid.pause();
         $('.dash').removeClass('hidden');
     });
     $('#shoplink').click(function() {
@@ -31,6 +21,11 @@ $(document).ready(function() {
         shopvid.currentTime = 0;
         shopvid.play();
         $('.shop').addClass('fadeIn');
+    });
+    $('#tourlink').click(function() {
+        $('.tour').removeClass('hidden');
+        $('.dash').addClass('hidden');
+        $('.tour').addClass('fadeIn');
     });
     $('.back').click(function() {
         $('.shop').addClass('fadeOut');
@@ -60,9 +55,6 @@ $(document).ready(function() {
     });
     $('.republic-logo').click(function() {
         window.open('http://www.republicrecords.com/');
-    });
-    $('#tourlink').click(function() {
-        //window.open('https://www.songkick.com/artists/9035059-nessly');
     });
     $('#storelink').click(function() {
         window.open('http://nesslyworld.bigcartel.com/');
