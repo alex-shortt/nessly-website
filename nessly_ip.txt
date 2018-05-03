@@ -1,0 +1,9 @@
+NESSLY IP:
+
+a 	@ 	107.180.13.125 	600 seconds
+a 	admin 	107.180.13.125 	600 seconds
+a 	mail 	107.180.13.125 	600 seconds
+
+NESSLY LOGIN:
+ID: 128096990
+PW: Prosperforever1

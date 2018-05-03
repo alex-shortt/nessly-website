@@ -1,0 +1,398 @@
+@font-face {
+    font-family: "Druk Wide";
+    src: url("../assets/Druk-Wide-Medium.otf");
+}
+
+.splash {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.dash,
+.shop,
+.soundspace,
+.interact,
+.credits {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.shop video {
+    display: block;
+    margin: 0 auto;
+    height: 100vh;
+    width: 75%;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    font-family: 'object-fit: contain;'
+}
+
+body {
+    overflow: hidden;
+}
+
+
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+    -webkit-transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.tourlink {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    /*background-color: white;*/
+    width: 18%;
+    height: 24%;
+}
+
+.shoplink {
+    position: absolute;
+    top: 69%;
+    left: 35%;
+    /*background-color: lightblue;*/
+    width: 6%;
+    height: 5%;
+}
+
+#shirt1 {
+    position: absolute;
+    top: 37%;
+    left: 21%;
+    width: 15%;
+    height: 36%;
+    /* background-color: lightblue;
+    opacity: 20%; */
+}
+
+#shirt2 {
+    position: absolute;
+    top: 37%;
+    left: 43%;
+    width: 15%;
+    height: 36%;
+    /* background-color: lightblue;
+    opacity: 20%; */
+}
+
+#shirt3 {
+    position: absolute;
+    top: 37%;
+    left: 65%;
+    width: 15%;
+    height: 36%;
+    /* background-color: lightblue;
+    opacity: 20%; */
+}
+
+.buyshirt button {
+    opacity: 0;
+}
+
+.buyshirt button:hover {
+    opacity: 1;
+}
+
+.soundlink {
+    position: absolute;
+    top: 58%;
+    left: 44%;
+    /*background-color: lightgreen;*/
+    width: 33.7%;
+    height: 31%;
+}
+
+.interactlink {
+    position: absolute;
+    top: 82%;
+    left: 79%;
+    /*background-color: lightyellow;*/
+    width: 9%;
+    height: 5%;
+}
+
+.creditslink {
+    position: absolute;
+    top: 26%;
+    left: 85%;
+    width: 15%;
+    height: 27%;
+}
+
+.dash img {
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+button {
+    border: hidden;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.sociallinks-links {
+    position: absolute;
+    bottom: 10px;
+    left: calc(10px + 0.8vw);
+    height: 3.4vw;
+    width: 13.5vw;
+    display: flex;
+}
+
+.sociallinks-links>a {
+    flex: 1;
+}
+
+.sociallinks {
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    opacity: 0.5;
+    width: 15vw !important;
+    height: auto;
+}
+
+.extsoundcloud {
+    left: 81%;
+    /* background-color: lightblue; */
+}
+
+.exttwitter {
+    left: 84.5%;
+    /* background-color: #75DA68; */
+}
+
+.extitunes {
+    left: 87.6%;
+    /* background-color: #DAB668; */
+}
+
+.extspotify {
+    left: 90.8%;
+    /* background-color: #DD7467; */
+}
+
+.extinstagram {
+    left: 94.1%;
+    /* background-color: #0F23D1; */
+}
+
+.extrecords {
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    height: 5%;
+    width: 5%;
+    opacity: 0.2;
+}
+
+.extrecords:hover {
+    opacity: 0.8;
+}
+
+.extrecords img {
+    max-height: 100%;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#threeD-wrapper {
+    position: absolute;
+    top: 0;
+}
+
+.dash {
+    background-image: url("../assets/bg-min.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.fairy {
+    margin: 20px;
+    width: 9vw !important;
+    height: auto;
+    position: absolute;
+    top: 0;
+}
+
+.fairy-left {
+    left: 0;
+}
+
+.fairy-right {
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.republic-logo {
+    opacity: 0.4;
+    bottom: 0;
+    right: 0;
+    width: 8vw !important;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.republic-logo:hover {
+    opacity: 0.9;
+}
+
+.wildflowertext {
+    position: absolute;
+    left: 50%;
+    width: 56vw !important;
+    top: 4vh;
+    height: auto;
+    transform: translateX(-50%) translateY(-3vh);
+}
+
+.text-links {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateY(17vh);
+}
+
+.text-links>h1 {
+    text-align: center;
+    font-family: "Druk Wide";
+    color: white;
+    font-size: 3.5vw;
+    cursor: pointer;
+}
+
+.soundspace {
+    background: #2E0101;
+}
+
+.soundspace img {
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+.back {
+    font-family: "Druk Wide";
+    left: 50%;
+    position: absolute;
+    margin: 17px 0px;
+    bottom: 0;
+    transform: translateX(-50%);
+    border: 3px solid white;
+    background: transparent;
+    color: white;
+    font-size: 20pt;
+}
+
+.spotify{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 70vw;
+}
+
+@media screen and (max-width: 800px) {
+    .back{
+        top: 0;
+        bottom: initial;
+    }
+    .text-links>h1 {
+        font-size: 6vw;
+    }
+    .wildflowertext {
+        width: 80vw !important;
+    }
+    .fairy {
+        margin: 5px;
+        width: 15vw !important;
+    }
+    .sociallinks {
+        width: 45vw !important;
+    }
+    .sociallinks-links {
+        left: calc(10px + 2.4vw);
+        height: 10vw;
+        width: 40vw;
+    }
+    .republic-logo {
+        width: 18vw !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .text-links {
+        transform: translate(-50%, -50%) translateY(7vh);
+    }
+    .text-links>h1 {
+        font-size: 12vw;
+        margin: 5vh 0px;
+    }
+    .wildflowertext {
+        width: 100vw !important;
+        top: 7vh;
+    }
+    .fairy {
+        width: 25vw !important;
+    }
+    .sociallinks {
+        width: 65vw !important;
+        margin: 5px;
+    }
+    .sociallinks-links {
+        height: 12vw;
+        width: 58vw;
+    }
+    .republic-logo {
+        width: 25vw !important;
+        margin: 5px;
+    }
+}
