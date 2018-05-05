@@ -324,9 +324,6 @@ button {
   border: white 2px solid;
   padding: 10px;
   overflow-y: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .tour-table {
