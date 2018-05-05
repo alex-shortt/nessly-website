@@ -3,29 +3,36 @@ $(document).ready(function() {
     var canvas = $("canvas");
     canvas.appendTo(".interact");
     var shopvid = document.getElementsByClassName("shop")[0].getElementsByTagName("video")[0];
-
     shopvid.pause();
+
     $('.splash').click(function() {
         $(this).addClass('fadeOut');
         $('.dash').removeClass('hidden');
         $('.dash').addClass('fadeIn');
     });
-    $('.back').click(function() {
-        $('.credits').addClass('fadeOut');
-        $('.credits').addClass('hidden');
-        $('.dash').removeClass('hidden');
-    });
-    $('#shoplink').click(function() {
-        $('.shop').removeClass('hidden');
+    $('#soundlink').click(function() {
+        $('.soundspace').removeClass('hidden');
         $('.dash').addClass('hidden');
-        shopvid.currentTime = 0;
-        shopvid.play();
-        $('.shop').addClass('fadeIn');
+        $('.soundspace').addClass('fadeIn');
+    });
+    $('#storelink').click(function() {
+        window.open('http://nesslyworld.bigcartel.com/');
+    });
+    $('#interactlink').click(function() {
+        $('.interact').removeClass('hidden');
+        $('.dash').addClass('hidden');
+        $('.interact').addClass('fadeIn');
     });
     $('#tourlink').click(function() {
         $('.tour').removeClass('hidden');
         $('.dash').addClass('hidden');
         $('.tour').addClass('fadeIn');
+    });
+
+    $('.back').click(function() {
+        $('.credits').addClass('fadeOut');
+        $('.credits').addClass('hidden');
+        $('.dash').removeClass('hidden');
     });
     $('.back').click(function() {
         $('.shop').addClass('fadeOut');
@@ -33,31 +40,24 @@ $(document).ready(function() {
         $('.dash').removeClass('hidden');
         shopvid.pause();
     });
-    $('#interactlink').click(function() {
-        $('.interact').removeClass('hidden');
-        $('.dash').addClass('hidden');
-        $('.interact').addClass('fadeIn');
-    });
     $('.back').click(function() {
         $('.interact').addClass('fadeOut');
         $('.interact').addClass('hidden');
         $('.dash').removeClass('hidden');
-    });
-    $('#soundlink').click(function() {
-        $('.soundspace').removeClass('hidden');
-        $('.dash').addClass('hidden');
-        $('.soundspace').addClass('fadeIn');
     });
     $('.back').click(function() {
         $('.soundspace').addClass('fadeOut');
         $('.soundspace').addClass('hidden');
         $('.dash').removeClass('hidden');
     });
+    $('.back').click(function() {
+        $('.tour').addClass('fadeOut');
+        $('.tour').addClass('hidden');
+        $('.dash').removeClass('hidden');
+    });
+
     $('.republic-logo').click(function() {
         window.open('http://www.republicrecords.com/');
-    });
-    $('#storelink').click(function() {
-        window.open('http://nesslyworld.bigcartel.com/');
     });
     if (window.matchMedia("screen and (max-width: 600px)").matches) {
         $('.splash').addClass('fadeOut');
