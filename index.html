@@ -18,6 +18,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="scripts/three-assets.min.js" type="text/javascript"></script>
     <script src="scripts/three-main.js" type="text/javascript"></script>
+    <script src="scripts/jquery.ba-hashchange.min.js"></script>
     <script src="app.js"></script>
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,26 +45,9 @@
 <body>
     <div>
         <div class="container-fluid splash">
-            <video autoplay loop class="video-background" muted plays-inline>
+            <video id="landing-video" autoplay loop class="video-background" muted plays-inline>
                 <source src="videos/openingsplashpage.mp4" type="video/mp4">
             </video>
-        </div>
-        <div class="container-fluid credits hidden">
-            <video autoplay loop class="video-background" muted plays-inline>
-                <source src="sitedesign.mp4" type="video/mp4">
-            </video>
-            <button class="back">BACK</button>
-        </div>
-        <div class="container-fluid shop hidden">
-            <video autoplay loop class="video-background" muted plays-inline>
-                <source src="finalstore.mp4" type="video/mp4">
-            </video>
-            <row class="buyshirt">
-                <button id="shirt1"><img src="buy.png" /></button>
-                <button id="shirt2"><img src="buy.png" /></button>
-                <button id="shirt3"><img src="buy.png" /></button>
-            </row>
-            <button class="back">BACK</button>
         </div>
         <div class="container-fluid soundspace hidden">
             <img class="fairy fairy-left" src="assets/fairy.png" />
@@ -139,14 +123,14 @@
             <button class="back">BACK</button>
         </div>
         <div class="container-fluid interact hidden">
-            <img src="interact_00000.jpg" />
             <div id="threeD-wrapper"></div>
+            <h4 class="interact-text">INTERACT: MOVE CURSOR AROUND TO DRAG AND PULL NESSLY</h4>
             <button class="back">BACK</button>
         </div>
         <div class="container-fluid dash hidden">
             <img class="fairy fairy-left" src="assets/fairy.png" />
             <img class="fairy fairy-right" src="assets/fairy.png" />
-            <img src="assets/wildflowertext4.gif" class="wildflowertext" />
+            <img id="wildflower-text" src="assets/wildflowertext4.gif" class="wildflowertext" />
             <img class="sociallinks" src="assets/socialmediaiconsnew.png" />
             <row class="sociallinks-links">
                 <a class="extsoundcloud" target="_blank" href="https://soundcloud.com/nessly"></a>

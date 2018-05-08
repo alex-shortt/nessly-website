@@ -1,64 +1,81 @@
-/* global $*/
+/* global $ */
 $(document).ready(function() {
+    var video = $("#landing-video").get(0);
+
+    $(window).hashchange(function() {
+        var hash = location.hash;
+        var cleanHash = (hash.replace(/^#/, '') || 'blank').split("?")[0];
+
+        $('.splash').addClass('hidden');
+        $('.dash').addClass('hidden');
+        $('.soundspace').addClass('hidden');
+        $('.interact').addClass('hidden');
+        $('.tour').addClass('hidden');
+
+        switch (cleanHash) {
+            case 'blank':
+                $('.splash').removeClass('hidden');
+                break;
+            case 'home':
+                $('.dash').removeClass('hidden');
+                $('.dash').addClass('fadeIn');
+                break;
+            case 'listen':
+                $('.soundspace').removeClass('hidden');
+                $('.soundspace').addClass('fadeIn');
+                break;
+            case 'interact':
+                $('.interact').removeClass('hidden');
+                $('.interact').addClass('fadeIn');
+                break;
+            case 'tour':
+                $('.tour').removeClass('hidden');
+                $('.tour').addClass('fadeIn');
+                break;
+            default:
+                window.location.hash = "home";
+                break;
+        }
+    });
+
+    $(window).hashchange();
+
     var canvas = $("canvas");
     canvas.appendTo(".interact");
-    var shopvid = document.getElementsByClassName("shop")[0].getElementsByTagName("video")[0];
-    shopvid.pause();
 
     $('.splash').click(function() {
-        $(this).addClass('fadeOut');
-        $('.dash').removeClass('hidden');
-        $('.dash').addClass('fadeIn');
+        window.location.hash = "home";
     });
+
     $('#soundlink').click(function() {
-        $('.soundspace').removeClass('hidden');
-        $('.dash').addClass('hidden');
-        $('.soundspace').addClass('fadeIn');
+        window.location.hash = "listen";
     });
+
     $('#storelink').click(function() {
         window.open('http://nesslyworld.bigcartel.com/');
     });
+
     $('#interactlink').click(function() {
-        $('.interact').removeClass('hidden');
-        $('.dash').addClass('hidden');
-        $('.interact').addClass('fadeIn');
+        window.location.hash = 'interact';
+
     });
     $('#tourlink').click(function() {
-        $('.tour').removeClass('hidden');
-        $('.dash').addClass('hidden');
-        $('.tour').addClass('fadeIn');
+        window.location.hash = 'tour';
     });
 
     $('.back').click(function() {
-        $('.credits').addClass('fadeOut');
-        $('.credits').addClass('hidden');
-        $('.dash').removeClass('hidden');
-    });
-    $('.back').click(function() {
-        $('.shop').addClass('fadeOut');
-        $('.shop').addClass('hidden');
-        $('.dash').removeClass('hidden');
-        shopvid.pause();
-    });
-    $('.back').click(function() {
-        $('.interact').addClass('fadeOut');
-        $('.interact').addClass('hidden');
-        $('.dash').removeClass('hidden');
-    });
-    $('.back').click(function() {
-        $('.soundspace').addClass('fadeOut');
-        $('.soundspace').addClass('hidden');
-        $('.dash').removeClass('hidden');
-    });
-    $('.back').click(function() {
-        $('.tour').addClass('fadeOut');
-        $('.tour').addClass('hidden');
-        $('.dash').removeClass('hidden');
+        window.location.hash = "home";
     });
 
     $('.republic-logo').click(function() {
         window.open('http://www.republicrecords.com/');
     });
+
+    $('#wildflower-text').click(function() {
+        video.currentTime = 0;
+        window.location.hash = "";
+    });
+
     if (window.matchMedia("screen and (max-width: 600px)").matches) {
         $('.splash').addClass('fadeOut');
         $('.dash').removeClass('hidden');
