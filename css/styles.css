@@ -323,7 +323,6 @@ button {
     max-height: 70vh;
     border: white 2px solid;
     padding: 10px;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
@@ -335,6 +334,19 @@ button {
 .tour-item>h6 {
     font-family: "Druk Wide";
     margin: 0px 8px;
+}
+
+.tour-title {
+    color: white;
+    font-family: "Druk Wide";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    top: -40px;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    font-size: 1.6em;
 }
 
 .tour-item {
@@ -450,8 +462,9 @@ button {
         transform: translate(-50%, -50%) translateY(15px);
         width: 95vw;
         max-height: 70vh;
+        padding: 0;
     }
-    .tour-item{
+    .tour-item {
         margin: 8px 0px;
     }
     .tour-container>hr {
@@ -459,5 +472,9 @@ button {
     }
     .tour-item>h6 {
         font-size: .7em;
+    }
+    .tour-title {
+        font-size: 5.7vw;
+        top: -9vw;
     }
 }

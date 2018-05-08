@@ -3,6 +3,7 @@ $(document).ready(function() {
     var video = $("#landing-video").get(0);
 
     $(window).hashchange(function() {
+        console.log('asdf');
         var hash = location.hash;
         var cleanHash = (hash.replace(/^#/, '') || 'blank').split("?")[0];
 
@@ -14,7 +15,11 @@ $(document).ready(function() {
 
         switch (cleanHash) {
             case 'blank':
-                $('.splash').removeClass('hidden');
+                if (window.matchMedia("screen and (max-width: 600px)").matches) {
+                    window.location.hash = "tour";
+                } else {
+                    $('.splash').removeClass('hidden');
+                }
                 break;
             case 'home':
                 $('.dash').removeClass('hidden');
@@ -44,7 +49,7 @@ $(document).ready(function() {
     canvas.appendTo(".interact");
 
     $('.splash').click(function() {
-        window.location.hash = "home";
+        window.location.hash = "tour";
     });
 
     $('#soundlink').click(function() {
@@ -76,11 +81,6 @@ $(document).ready(function() {
         window.location.hash = "";
     });
 
-    if (window.matchMedia("screen and (max-width: 600px)").matches) {
-        $('.splash').addClass('fadeOut');
-        $('.dash').removeClass('hidden');
-        $('.dash').addClass('fadeIn');
-    }
     printCredits();
 });
 
