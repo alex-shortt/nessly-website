@@ -319,30 +319,30 @@ button {
     top: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 60vw;
+    width: 750px;
     max-height: 70vh;
     border: white 2px solid;
     padding: 10px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.tour-table {
-    width: 100%;
-    text-align: center;
-    color: white;
+.tour-container>hr {
+    border-color: white;
+}
+
+.tour-item>h6 {
     font-family: "Druk Wide";
+    margin: 0px 8px;
 }
 
-.tour-table>tbody>tr {
-    border-bottom: 1px solid white;
-}
-
-.tour-table>tbody>tr:last-child {
-    border-bottom: none;
-}
-
-.tour-table>tbody>tr>td {
-    padding: 20px 10px;
+.tour-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: white;
+    text-align: center;
 }
 
 .soundspace img {
@@ -449,7 +449,15 @@ button {
     .tour-container {
         transform: translate(-50%, -50%) translateY(15px);
         width: 95vw;
-        height: 60vh;
-        font-size: 11px;
+        max-height: 70vh;
+    }
+    .tour-item{
+        margin: 8px 0px;
+    }
+    .tour-container>hr {
+        display: none;
+    }
+    .tour-item>h6 {
+        font-size: .7em;
     }
 }
